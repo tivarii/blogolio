@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input:focus ~ .input-text {
+  @apply text-opacity-100 text-slate-500 bg-neutral-950 transition duration-500 transform -translate-y-5 scale-75
+}
+
+input:not(:placeholder-shown) ~ .input-text {
+  @apply text-opacity-100 text-slate-500 bg-neutral-950 transition duration-500 transform -translate-y-5 scale-75
+}
+
+.scrollbar::-webkit-scrollbar {
+  color: aliceblue;
+}
+
+.tiptap.ProseMirror{
+  outline: none;
+  color: white;
+  height: 400px;
+  min-width: 500px;
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose :where(ul > li):not(:where([class~="not-prose"],[class~="not-prose"] *))::marker {
+  color: white;
+}
+.prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+.prose :where(ol > li):not(:where([class~="not-prose"],[class~="not-prose"] *))::marker {
+  color: white;
+}
+
+.prose :where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  background-color: black;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+  border-left-color: whitesmoke;
+}
+
+.is-active {
+  background-color: rgb(59, 65, 70);
+  border-radius: 5px;
+}
+
+
+/* .tiptap.ProseMirror.dashboard {
+  height: auto;
+} */
